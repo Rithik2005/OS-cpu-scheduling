@@ -1,47 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CPU Scheduling</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rithik's portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+        
+        section {
+            padding: 3rem 2rem;
+            margin: 20px auto;
+            width: 80%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        section:hover {
+            transform: scale(1.02);
+        }
+        
+        .project {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        form input, form textarea {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0.5rem auto;
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        button:hover {
+            background: linear-gradient(135deg, #ff5e62, #ff9966);
+        }
+    </style>
 </head>
 <body>
-  <!-- Start - Splash Animation -->
-  <div class="splash-screen" id="splashScreen">
-    <div class="splash-content">
-      <script
-        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-        type="module"
-      ></script>
-    </div>
-  </div>
-  <!-- End - Splash Animation -->
-  <div class="main-content" id="mainContent">
-    <!-- Start - Form -->
-    <div class="input-container">
-      <h2>Input</h2>
-      <label for="algorithm">Algorithm</label>
-      <select id="algorithm">
-        <option value="FCFS">First Come First Serve (FCFS)</option>
-        <option value="SJF">Shortest Job First (SJF)</option>
-        <option value="SRTF">Shortest Remaining Time First (SRTF)</option>
-        <option value="RR">Round Robin (RR)</option>
-      </select>
-      <label for="arrivalTime">Arrival Time</label>
-      <input type="text" id="arrivalTime" placeholder="e.g., 1 2 3 4" />
-      <label for="burstTime">Burst Time</label>
-      <input type="text" id="burstTime" placeholder="e.g., 1 2 3 4" />
-      <button onclick="solve()">Solve</button>
-    </div>
-
-    <div class="output-container">
-      <h2>Output</h2>
-      <div id="output" class="table-container"></div>
-    </div>
-    <!-- End - Form -->
-  </div>
-  <script src="script.js"></script>
+    <header>
+        <h1>Rithik's Resume</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Rithik, a web developer specializing in database management and backend development. I'm currently studying at Kongu Engineering College.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Project description goes here.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Project description goes here.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:rithiks.22cse@kongu.edu">rithiks.22cse@kongu.edu</a></p>
+        <p>Phone: <a href="tel:+919543640045">+91 9543640045</a></p>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <script src="script.js"></script>
 </body>
 </html>
